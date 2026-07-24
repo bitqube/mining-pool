@@ -1,25 +1,4 @@
 {
-  "_from": "git+https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-  "_id": "stratum-pool@0.1.6",
-  "_inBundle": false,
-  "_location": "/stratum-pool",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "stratum-pool@git+https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-    "name": "stratum-pool",
-    "escapedName": "stratum-pool",
-    "rawSpec": "git+https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-    "saveSpec": "git+https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-    "fetchSpec": "https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-    "gitCommittish": null
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "git+https://github.com/RavenCommunity/kawpow-stratum-pool.git#c66ba109e7de88edc46dd70f36aa9c7cea7d7add",
-  "_spec": "stratum-pool@git+https://github.com/RavenCommunity/kawpow-stratum-pool.git",
-  "_where": "",
   "author": {
     "name": "Traysi"
   },

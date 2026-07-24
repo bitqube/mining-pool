@@ -17,20 +17,39 @@ BitQube chain. Do **not** replace it with the upstream git dependency.
 
 ```bash
 nvm use 12
-npm install                 # installs deps + links ./stratum-pool via "file:"
-cp config_example.json config.json                 # then edit stratumHost, etc.
+npm ci      # deterministic install from the committed package-lock.json (preferred)
+```
+
+Prefer `npm ci`. If you run `npm install` instead, npm re-nests a newer
+`@dabh/diagnostics` whose `@so-ric/colorspace` uses `||=` (Node 15+ syntax) and
+`node init.js` crashes with `SyntaxError: Unexpected token '='`. The committed
+`package-lock.json` + the `resolutions` block pin it to `@dabh/diagnostics@2.0.3`.
+To repair a bad `npm install` tree:
+
+```bash
+npm install --no-save npm-force-resolutions
+./node_modules/.bin/npm-force-resolutions   # rewrites package-lock.json per "resolutions"
+rm -rf node_modules && npm install
+```
+
+Then configure and run:
+
+```bash
+cp config_example.json config.json          # edit stratumHost, etc.
 cp pool_configs/bitqube_example.json pool_configs/bitqube.json
-#   ^ edit RPC user/password to match bitqube.conf; remove the *_example.json
-#     from pool_configs/ so NOMP does not load its placeholder credentials.
 node init.js
 ```
 
-`pool_configs/` note: NOMP loads **every** `*.json` in that folder. Keep only your
-real `bitqube.json` (+ any disabled coins). A leftover `*_example.json` with
-`"enabled": true` and placeholder creds causes "Unauthorized RPC access".
+**pool_configs/bitqube.json** — set your RPC user/password in **BOTH** places:
+`paymentProcessing.daemon` **and** the top-level `daemons` array. The stratum
+worker uses `daemons`; the payment processor uses `paymentProcessing.daemon`. If
+only one is set you get `Unauthorized RPC access` from `[Pool]` while the payment
+processor still works (or vice-versa). Then **remove `bitqube_example.json`** from
+`pool_configs/` — NOMP loads **every** `*.json` there, and the example's
+placeholder creds (`"enabled": true`) otherwise cause "Unauthorized RPC access".
 
-The `coin` field in a pool config is used **verbatim** as the filename, so it must
-be `"coin": "bitqube.json"` (with the extension) to match `coins/bitqube.json`.
+The `coin` field is used **verbatim** as the filename, so it must be
+`"coin": "bitqube.json"` (with the extension) to match `coins/bitqube.json`.
 
 ## The two patches in ./stratum-pool (already applied)
 

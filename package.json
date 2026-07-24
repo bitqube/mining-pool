@@ -79,7 +79,10 @@
         "winston-transport": "^4.3.0",
         "@dabh/diagnostics": "2.0.3"
     },
+    "resolutions": {
+        "@dabh/diagnostics": "2.0.3"
+    },
     "engines": {
-        "node": ">=8.1.4"
+        "node": ">=12 <15"
     }
 }
