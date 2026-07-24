@@ -1,6 +1,6 @@
 {
     
-    "poolname": "Raven Coin Pool",
+    "poolname": "BitQube Pool",
     
     "devmode": false,
     "devmodePayMinimim": 0.25,
@@ -12,16 +12,16 @@
     "ipv6bits": 16,
     "poolwarningmsg": "",
     
-     "defaultCoin": "ravencoin",
+     "defaultCoin": "bitqube",
     
-    "poollogo": "https://zelcash.github.io/zeltrez.io/images/logos/Ravencoin.svg",
+    "poollogo": "/static/img/bitqube-logo.png",
     
-    "discordtwitterfacebook": "Join our #mining channel on Discord: <a href='https://discord.gg/vzcbVNW' target='_blank'>https://discord.gg/vzcbVNW</a>",
+    "discordtwitterfacebook": "BitQube (BTQ) &mdash; <a href='https://bitqube.org' target='_blank'>bitqube.org</a> &middot; Explorer: <a href='https://explorer.bitqube.org' target='_blank'>explorer.bitqube.org</a>",
     
-    "pagetitle": "Raven Coin Pool - 1% Fees Promo - Run by professionals",
-    "pageauthor": "My Name Is...",
-    "pagedesc": "A reliable, low fee, easy to use mining pool for cryptocurrency! No matter your experience with mining cryptocurrency, we make it easy! Get started mining today!",
-    "pagekeywds": "GPU,CPU,Hash,Hashrate,Cryptocurrency,Crypto,Mining,Pool,Bitcoin,Raven,Ravencoin,Wavi,Wavicoin,Dixicoin,Dixi,QBic,QBicCoin,Easy,Simple,How,To",
+    "pagetitle": "BitQube Pool \u2014 1% Fee KawPoW Mining (BTQ)",
+    "pageauthor": "BitQube",
+    "pagedesc": "A reliable, low-fee KawPoW mining pool for BitQube (BTQ). Easy GPU mining with a 1% fee \u2014 start mining BTQ today!",
+    "pagekeywds": "BitQube,BTQ,KawPoW,GPU,Mining,Pool,Hashrate,Cryptocurrency,Crypto,Mine BTQ",
 
     "btcdonations": "1NRXddRwZSXVQ8NBdgiwv5DsJn2bmHenu6",
     "ltcdonations": "LcghtmAVSi94FHrn4xbbSd4nFChWy6QUng",
@@ -65,12 +65,12 @@
         "enabled": true,
         "sslenabled": false,
         "sslforced": false,
-        "host": "0.0.0.0",
-        "port": 80,
+        "host": "127.0.0.1",
+        "port": 8080,
         "sslport": 443,
         "sslkey": "~/rvn-kawpow-pool/certs/privkey.pem",
         "sslcert": "~/rvn-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "192.168.0.200",
+        "stratumHost": "5.78.79.98",
         "stats": {
             "updateInterval": 5,
             "historicalRetention": 43200,

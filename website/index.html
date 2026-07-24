@@ -79,6 +79,23 @@
         
         
         <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+
+        <!-- BitQube brand theme (blue #2f6fed primary + gold #f2a81c accent, on the dark base) -->
+        <style>
+          :root { --btq-blue:#2f6fed; --btq-gold:#f2a81c; }
+          a { color: var(--btq-blue); }
+          a:hover, a:focus { color: #5b8dff; }
+          .btn-primary, .bg-primary { background-color: var(--btq-blue) !important; border-color: var(--btq-blue) !important; }
+          .btn-primary:hover, .btn-primary:focus { background-color: #2559d6 !important; border-color: #2559d6 !important; }
+          .text-primary { color: var(--btq-blue) !important; }
+          .badge-primary, .badge.badge-primary { background-color: var(--btq-blue) !important; }
+          .progress-bar { background-color: var(--btq-blue); }
+          .text-warning, .text-gold { color: var(--btq-gold) !important; }
+          /* dark header with a BitQube-gold underline accent */
+          .navbar.bg-dark, header.bg-dark, nav.bg-dark { border-bottom: 2px solid var(--btq-gold); }
+          .home-menu > ul > li.pure-menu-selected > a,
+          .home-menu > ul > li > a:hover, .home-menu > ul > li > a:focus { color: var(--btq-gold) !important; }
+        </style>
         
         <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>

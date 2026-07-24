@@ -1,0 +1,16 @@
+{
+    "name": "bitqube",
+    "symbol": "BTQ",
+    "algorithm": "kawpow",
+
+    "wallet": "https://bitqube.org",
+
+    "explorer": "https://explorer.bitqube.org/",
+
+    "explorerGetBlockJSON": "https://explorer.bitqube.org/api/getrawtransaction?decrypt=1&txid=",
+    "explorerGetBlock": "https://explorer.bitqube.org/block/",
+    "explorerGetTX": "https://explorer.bitqube.org/tx/",
+
+    "blockTime": 60,
+    "blockChange": 1
+}
