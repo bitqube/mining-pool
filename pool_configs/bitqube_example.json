@@ -39,11 +39,12 @@
             }
         },
         "10032": {
+            "diff": 0.05,
             "varDiff": {
-                "minDiff": 0.04,
+                "minDiff": 0.02,
                 "maxDiff": 16,
                 "targetTime": 10,
-                "retargetTime": 60,
+                "retargetTime": 30,
                 "variancePercent": 30,
                 "maxJump": 25
             }

@@ -68,9 +68,9 @@
         "host": "127.0.0.1",
         "port": 8080,
         "sslport": 443,
-        "sslkey": "~/rvn-kawpow-pool/certs/privkey.pem",
-        "sslcert": "~/rvn-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "5.78.79.98",
+        "sslkey": "~/bitqube-pool/certs/privkey.pem",
+        "sslcert": "~/bitqube-pool/certs/fullchain.pem",
+        "stratumHost": "YOUR_SERVER_PUBLIC_IP",
         "stats": {
             "updateInterval": 5,
             "historicalRetention": 43200,

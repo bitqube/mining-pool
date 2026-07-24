@@ -29,3 +29,6 @@ pool_configs/*.json
 !pool_configs/*_example.json
 
 !.gitkeep
+
+# keep the vendored stratum-pool lockfile for deterministic installs
+!stratum-pool/package-lock.json

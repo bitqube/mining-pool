@@ -19,7 +19,7 @@
 			{{ if ((it.portalConfig.pagedesc !== "undefined") & (it.portalConfig.pagedesc !== "")) { }}
 				<meta name="description" content="{{=it.portalConfig.pagedesc}}" />
 			{{ } else { }}
-				<meta name="description" content="An EasyNOMP cryptocurrency mining pool - https://github.com/leshacat/EasyNOMP" />    
+				<meta name="description" content="BitQube (BTQ) KawPoW mining pool" />    
 			{{ } }}
 			
         
@@ -27,7 +27,7 @@
 			{{ if ((it.portalConfig.pagekeywds !== "undefined") & (it.portalConfig.pagekeywds !== "")) { }}
 				<meta name="keywords" content="{{=it.portalConfig.pagekeywds}}" />
 			{{ } else { }}
-				<meta name="keywords" content="EasyNOMP,NOMP,node-open-mining-portal,pool,mining pool, mining, cryptocurrency, crypto, bitcoin, btc" />
+				<meta name="keywords" content="BitQube,BTQ,KawPoW,GPU mining,pool,cryptocurrency" />
 			{{ } }}
 			
         
@@ -44,7 +44,7 @@
 			{{ if ((it.portalConfig.pagetitle !== "undefined") & (it.portalConfig.pagetitle !== "")) { }}
 				<title>{{=it.portalConfig.pagetitle}}</title>
 			{{ } else { }}
-				<title>EasyNOMP Mining Pool - https://github.com/leshacat/EasyNOMP</title>	    
+				<title>BitQube Pool</title>	    
 			{{ } }}
 	    
 	    
@@ -137,7 +137,7 @@
 						<span style="font-size: 18px; color: white;">&nbsp;&nbsp;<b>{{=it.portalConfig.poolname}}</b></span>
 					{{ } }}
 		    
-                    <span style="font-size: 10px; color: white;">Powered by <a href="https://github.com/EasyX-Community/EasyNOMP" target="_blank">EasyX-Community/EasyNOMP</a></span>
+                    <span style="font-size: 10px; color: white;">1% Fee &middot; KawPoW &middot; PROP Payouts</span>
                     <span style="font-size: 16px; color: white;"><i>{{=it.portalConfig.discordtwitterfacebook}}&nbsp;&nbsp;&nbsp;&nbsp;</i></span>
             </nav>
         </header>
@@ -298,10 +298,9 @@
                     </li>
                            
                                    
+                   <!-- news section removed -->
                    <li>
-                     <a href="/news">
-                         <i class="fas fa-newspaper sidebar-icon"></i>&nbsp;News
-                     </a>
+                     <a href="/"><i class="fa fa-home sidebar-icon"></i>&nbsp;Home</a>
                    </li>
                    
                          
@@ -377,17 +376,7 @@
                         
                        <li>
                          <a href="https://github.com/trexminer/T-Rex/releases" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-download sidebar-icon"></i>&nbsp;T-Rex</a>
-                       </li> 
-                        <li>
-                         <a href="https://www.nicehash.com/?refby=1662147" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//www.nicehash.com/favicon.ico" style="height: 24px;width: 24px;" alt="icon" />&nbsp;NiceHash
-                         </a>
-                        </li>
-                        <li>
-                         <a href="https://www.miningrigrentals.com/register?ref=2607460" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//www.miningrigrentals.com/favicon.ico" style="height: 24px;width: 24px;" alt="icon" />&nbsp;MiningRigRentals
-                         </a>
-                        </li>                 
+                       </li>
                                              
                         <p></p>
                        
@@ -419,25 +408,8 @@
                      
                         
                         <li>
-                         <a href="https://brave.com/eas244" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//brave.com/wp-content/uploads/2018/02/cropped-brave_appicon_release-32x32.png" style="height: 24px;width: 24px;" alt="icon" />&nbsp;Brave Browser
-                         </a>
-                        </li>  
-                        <li>
-                         <a href="https://www.sliver.tv/invite/2g0snbvn" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//www.sliver.tv/favicon.ico" style="height: 24px;width: 24px;" alt="icon" />&nbsp;Silver.tv
-                         </a>
+                         <a href="https://bitqube.org" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-globe sidebar-icon"></i>&nbsp;BitQube Website</a>
                         </li>
-                        <li>
-                         <a href="https://www.nicehash.com/?refby=1662147" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//www.nicehash.com/favicon.ico" style="height: 24px;width: 24px;" alt="icon" />&nbsp;NiceHash
-                         </a>
-                        </li>
-                        <li>
-                         <a href="https://www.miningrigrentals.com/register?ref=2607460" target="_blank">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="//www.miningrigrentals.com/favicon.ico" style="height: 24px;width: 24px;" alt="icon" />&nbsp;MiningRigRentals
-                         </a>
-                        </li>                   
                                              
                         <p></p>
                        
@@ -495,36 +467,7 @@
 
 		<div>
 			
-			<!-- BTC Donations -->
-			{{ if ((it.portalConfig.btcdonations !== "undefined") & (it.portalConfig.btcdonations !== "")) { }}
-				<span>BTC Donations: {{=it.portalConfig.btcdonations}}</span><br />
-			{{ } else { }}
-				<span>BTC Donations: 18TmiWzbMLyf7MvQMcNWh3hUBVrxBgzrWi</span><br />	    
-			{{ } }}
-			
-			
-			<!-- BTC Donations -->
-			{{ if ((it.portalConfig.ltcdonations !== "undefined") & (it.portalConfig.ltcdonations !== "")) { }}
-				<span>LTC Donations: {{=it.portalConfig.ltcdonations}}</span><br />
-			{{ } else { }}
-				<span>LTC Donations: LX1fUwLVcAaRXvP67ZcqUvjjteaKx1nAvL</span><br />
-			{{ } }}
-			
-			
-			<!-- BTC Donations -->
-			{{ if ((it.portalConfig.ethdonations !== "undefined") & (it.portalConfig.ethdonations !== "")) { }}
-				<span>ETH/ERC20 Donations: {{=it.portalConfig.ethdonations}}</span><br />
-			{{ } else { }}
-				<span>ETH/ERC20 Donations: 0x52fD0B6847E1D3cEc5600359f24d671FdE2Bc65B</span><br />	    
-			{{ } }}
-			
-			
-			<!-- BTC Donations -->
-			{{ if ((it.portalConfig.xmrdonations !== "undefined") & (it.portalConfig.xmrdonations !== "")) { }}
-				<span>XMR Donations: {{=it.portalConfig.xmrdonations}}</span><br />
-			{{ } else { }}
-				<span>XMR Donations: 4AVabKt1zGhUckqWC5DKtkcc49ChYFuSETzvDZFfVnUYYY5vC4CSZ9xYzmCWvx7ePYZ9YvxgYbYsLL1L9TfQy2hi5Awsc7d</span><br />	    
-			{{ } }}
+			<span>BTQ Donations: B6VhYwsncpqhLDWVS1Y5yPTmyhozAK166m</span><br />
 
       </div>
 		<br />
@@ -532,16 +475,13 @@
 
 					<!-- PLEASE DO NOT CHANGE THIS UNLESS YOU ARE FORKING EASYNOMP! -->
 					<!-- CHANGING THIS IS A VIOLATION OF YOUR LICENSE TERMS~! -->
-                    <span>Powered by <a href="https://github.com/EasyX-Community/EasyNOMP" >EasyX-Community/EasyNOMP</a></span>
+                    <span>BitQube Pool &middot; <a href="https://bitqube.org">bitqube.org</a></span>
 					<!-- CHANGING THIS IS A VIOLATION OF YOUR LICENSE TERMS~! -->
 					<!-- PLEASE DO NOT CHANGE THIS UNLESS YOU ARE FORKING EASYNOMP! -->
 					
 					<!-- PLEASE DO NOT CHANGE THIS UNLESS YOU ARE FORKING EASYNOMP! -->
 					<!-- CHANGING THIS IS A VIOLATION OF YOUR LICENSE TERMS~! -->
-               <div id="communityFooter">
-                   <iframe src="//ghbtns.com/github-btn.html?user=EasyX-Community&repo=EasyNOMP&type=watch&count=true"
-                            allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
-               </div>
+               
                <!-- CHANGING THIS IS A VIOLATION OF YOUR LICENSE TERMS~! -->
 					<!-- PLEASE DO NOT CHANGE THIS UNLESS YOU ARE FORKING EASYNOMP! -->
 					
