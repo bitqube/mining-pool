@@ -88,3 +88,25 @@ t-rex -a kawpow -o stratum+tcp://YOUR_SERVER_PUBLIC_IP:10032 -u <BTQ_address> -w
 Stratum ports are raw TCP — point miners at the server IP / a DNS-only host, not
 a Cloudflare-proxied name. nginx (`pool.bitqube.org.conf`) only proxies the
 website (`:8080`), never stratum.
+
+## Running on a small / memory-constrained box
+
+On a ~2 GB VPS the **Website/Stats worker** can OOM as the chain grows: the global
+Redis zset `statHistory` accumulates one full stats snapshot per `updateInterval`,
+and each snapshot serializes every confirmed block, so it balloons to hundreds of
+MB. `stats.js` parses the whole thing to render the home page → `node` OOMs → the
+Website worker dies (home page returns **504**), and with no swap the OS may also
+kill Redis (`ECONNREFUSED`). Mining and payouts are unaffected — they run in
+separate workers backed by Redis, so payout data is never lost.
+
+Mitigations (in order of impact):
+
+1. **Add swap** (a ~2 GB swapfile) so spikes don't OOM-kill Redis:
+   `sudo fallocate -l 2G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab`
+2. Keep `website.stats.historicalRetention` low (default here is **1800**, ~360
+   snapshots at `updateInterval:5`). Do NOT raise Node's `--max-old-space-size`
+   on a small box — that makes the OOM-kill worse.
+3. If `statHistory` has already bloated, trim it (safe — it is only graph history,
+   not blocks/balances/payments):
+   `redis-cli ZREMRANGEBYRANK statHistory 0 -361`  (keeps the newest 360)
+   Verify with `redis-cli info memory | grep used_memory_human`.

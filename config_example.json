@@ -73,7 +73,7 @@
         "stratumHost": "YOUR_SERVER_PUBLIC_IP",
         "stats": {
             "updateInterval": 5,
-            "historicalRetention": 43200,
+            "historicalRetention": 1800,
             "hashrateWindow": 600
         },
         "adminCenter": {
