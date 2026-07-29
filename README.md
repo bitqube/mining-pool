@@ -74,7 +74,7 @@ cd bitqube-1.0.0/bin
 The binaries are statically linked (glibc only) — no dependency install needed.
 
 Create the pool's wallet address and note it down; it goes in
-`pool_configs/bitqube.json` as `address` / `donateaddress` / `rewardRecipients`:
+`pool_configs/bitqube.json` as `address` / `rewardRecipients`:
 
 ```bash
 ./bitqube-cli getnewaddress          # -> B... (the pool's payout/fee address)

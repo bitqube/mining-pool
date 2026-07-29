@@ -23,10 +23,6 @@
     "pagedesc": "A reliable, low-fee KawPoW mining pool for BitQube (BTQ). Easy GPU mining with a 1% fee \u2014 start mining BTQ today!",
     "pagekeywds": "BitQube,BTQ,KawPoW,GPU,Mining,Pool,Hashrate,Cryptocurrency,Crypto,Mine BTQ",
 
-    "btcdonations": "",
-    "ltcdonations": "",
-    "ethdonations": "",
-    "xmrdonations": "",
 
     "logger" : {
         "level" : "debug",
