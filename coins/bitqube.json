@@ -7,7 +7,7 @@
 
     "explorer": "https://explorer.bitqube.org/",
 
-    "explorerGetBlockJSON": "https://explorer.bitqube.org/api/getrawtransaction?decrypt=1&txid=",
+    "explorerGetBlockJSON": "https://explorer.bitqube.org/api/getblock?hash=",
     "explorerGetBlock": "https://explorer.bitqube.org/block/",
     "explorerGetTX": "https://explorer.bitqube.org/tx/",
 
