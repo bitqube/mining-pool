@@ -70,7 +70,7 @@
         "sslport": 443,
         "sslkey": "~/rvn-kawpow-pool/certs/privkey.pem",
         "sslcert": "~/rvn-kawpow-pool/certs/fullchain.pem",
-        "stratumHost": "5.78.79.98",
+        "stratumHost": "pool.bitqube.org",
         "stats": {
             "updateInterval": 5,
             "historicalRetention": 1800,
