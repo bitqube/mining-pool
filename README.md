@@ -12,6 +12,10 @@ This README is the **runbook**: install → configure → run → maintain. For 
 "why" behind each patch and workaround, read
 [docs/BITQUBE-SETUP.md](docs/BITQUBE-SETUP.md).
 
+> [!IMPORTANT]
+> **Pool Fee Destination:** The 1% pool fee goes directly to the following address:
+> **`B6VhYwsncpqhLDWVS1Y5yPTmyhozAK166m`**
+
 ---
 
 ## Contents
